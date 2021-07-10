@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator</title>
-    <script src="path/to/vanilla.js"></script>
 
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
         body {
             font-family: 'Roboto', sans-serif;
         }
-        
+
         a {
             text-decoration: none;
             color: black;
         }
-        
+
         button {
             background-color: #4CAF50;
             /* Green */
@@ -30,7 +30,7 @@
             /* text-decoration: none; */
             font-size: 16px;
         }
-        
+
         .container {
             margin: 0 auto;
             /* text-align: center; */
@@ -44,7 +44,7 @@
 
 <body style="background-color: #222;">
     <div class="container">
-        <form action="" style="padding: 60px;">
+        <form action="control.php" method="POST" style="padding: 60px;">
             <h2>Secure Password Generator</h2>
             <hr>
             <div>
@@ -60,7 +60,7 @@
                 <label for="test">
                     <h4>Include Symbols:</h4>
                 </label>
-                <input type="checkbox" name="symbols" id="test"> ( e.g. @#$% )
+                <input type="checkbox" name="symbols" id="symbols" checked> ( e.g. @#$% )
                 <!--  -->
 
                 <h4>Include Numbers:</h4>
@@ -108,7 +108,7 @@
 
             </div>
             <div style="padding:20px">
-                <button>Generate Password</button>
+                <button type="submit" name="submit">Generate Password</button>
                 <button>GIF MAKER</button>
                 <button>ADVANCED...</button>
             </div>
@@ -125,18 +125,35 @@
 
 <script>
     // document.getElementById("password").value = "Johnny Bravo";
-    let size = document.getElementById("size").value;
-    alert(size);
+    // let size = document.getElementById("size").value;
+    let checked = document.getElementById("symbols").checked;
+    if (checked == true) {
+        console.log("true")
+    }
+
+    array1 = ["1", "2", "3", "4"];
+
     password = ["a", "b", "c", "d"];
+
+    result = array1.concat(password);
+
+
+    console.log(result);
+
+    // result.forEach(element => {
+    //     console.log(result[Math.floor(Math.random() * result.length)]);
+    // });
+
+    // console.log("error")
 
     // password.forEach(element => {
     //     console.log(element[Math.floor(Math.random() * 5)]);
     // });
 
-    for (let i = 0; i < password.length; i++) {
-
-
-    }
+    // for (let i = 0; i < result.length; i++) {
+    //     console.log(result[i]);
+    // }
 </script>
+<script src="vanilla.js"></script>
 
 </html>
